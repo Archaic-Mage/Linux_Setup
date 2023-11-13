@@ -1,5 +1,6 @@
 #!/bin/sh
 
+sudo bash <<EOF
 # updating apt
 apt update
 # PACKAGE INSTALLATION apt
@@ -17,6 +18,7 @@ snap install firefox
 snap install brave
 snap install ruby
 snap install alacritty --classic
+EOF
 
 # FONTS INSTALLATION
 cp -r ./fonts/* /home/$User/.local/share/fonts/.
@@ -24,7 +26,7 @@ fc-cache /home/$USER/.local/share/fonts
 
 # fastfetch INSTALLATION (get the last release from github)
 wget https://github.com/fastfetch-cli/fastfetch/releases/download/2.2.3/fastfetch-2.2.3-Linux.deb
-apt install ./fastfetch-2.2.3-Linux.deb
+sudo apt install ./fastfetch-2.2.3-Linux.deb
 rm -rf fastfetch-2.2.3-Linux.deb
 
 # ZSH INSTALLATION
