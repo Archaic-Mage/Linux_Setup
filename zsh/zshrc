@@ -132,6 +132,7 @@ source /home/mage/scripts/myCustomFunctions
 EDITOR="nvim"
 export PATH="/home/mage/scripts:$PATH"
 export PATH="/home/mage/.local/bin:$PATH"
+export PATH="/snap/bin:$PATH"
 
 # is interactive
 [[ $- != *i* ]] && return
