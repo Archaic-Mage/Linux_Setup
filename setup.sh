@@ -33,9 +33,13 @@ rm -rf fastfetch-2.2.3-Linux.deb
 # make zsh default
 chsh -s $(which zsh)
 # install oh-my-zsh
-sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" &
 # replacing the rc with my custom rc
 cp ./zsh/zshrc /home/$USER/.zshrc
+# custom plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+source /home/$USER/.zshrc
 
 # TILIX INSTALLATION
 # loading custom settings for tilix
