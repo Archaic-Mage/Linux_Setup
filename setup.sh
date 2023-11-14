@@ -21,8 +21,8 @@ snap install alacritty --classic
 EOF
 
 # FONTS INSTALLATION
-cp -r ./fonts/* /home/$User/.local/share/fonts/.
-fc-cache /home/$USER/.local/share/fonts
+cp -r ./fonts/* /home/$USER/.local/share/fonts/.
+sudo fc-cache /home/$USER/.local/share/fonts
 
 # fastfetch INSTALLATION (get the last release from github)
 wget https://github.com/fastfetch-cli/fastfetch/releases/download/2.2.3/fastfetch-2.2.3-Linux.deb

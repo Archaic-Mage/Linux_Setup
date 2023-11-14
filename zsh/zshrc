@@ -128,10 +128,9 @@ alias ccat="highlight --out-format=ansi"
 
 #hardware info
 alias hw='hwinfo --short'
-source /home/mage/scripts/myCustomFunctions 
 EDITOR="nvim"
-export PATH="/home/mage/scripts:$PATH"
-export PATH="/home/mage/.local/bin:$PATH"
+export PATH="/home/$USER/scripts:$PATH"
+export PATH="/home/$USER/.local/bin:$PATH"
 export PATH="/snap/bin:$PATH"
 
 # is interactive
